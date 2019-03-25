@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DanceSportFederation.Models.ViewModels.Competitions.CompetitionVm>
+
+@{
+    ViewBag.Title = "DanceSport Federation";
+}
+<br />
+<br />
+
+<center><h2>Moderator Panel</h2></center>
+<br />
+<h4>View all Competitions</h4>
+<br />
+<hr />
+
+@if (User.IsInRole("Moderator"))
+{
+    @Html.ActionLink("Add", "Add", null, new { @class = "btn btn-primary" });
+}
+
+<br />
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Organizer</th>
+    </tr>
+    @foreach (var vm in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(vms => vm.Name)</td>
+            <td>@Html.DisplayFor(vms => vm.Organizer)</td>
+        </tr>
+    }
+
+</table>
+

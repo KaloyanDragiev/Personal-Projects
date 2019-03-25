@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="article">
+    <h1>Contact the World DanceSport Federation</h1>
+    <hr />
+    <div class="articleContent">
+        <p>If you're not sure who to contact or who can answer your question please fill out the form below and we will forward you to the corresponding department.</p>
+
+        <table>
+
+            <tbody>
+                <tr>
+                    <td>Address  (Headquarters):</td>
+                    <td>
+                        <address>
+                            World DanceSport Federation<br>Maison du Sport International<br>Avenue de Rhodanie 54<br>
+                            1007 -
+                            Lausanne<br>
+                            Switzerland
+                        </address>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address  (Branch Office):</td>
+                    <td>
+                        <address>
+                            World DanceSport Federation<br>C. Oriente 78-84<br>Floor 1, Office 14<br>
+                            08172 -
+                            Sant Cugat<br>
+                            Spain
+                        </address>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email:</td>
+                    <td><a href="mailto:office@wdsf.org" class="email">office@wdsf.org</a></td>
+                </tr>
+                <tr>
+                    <td>Website:</td>
+                    <td><a href="https://www.worlddancesport.com">https://www.worlddancesport.com</a></td>
+                </tr>
+
+
+
+                <tr>
+                    <td>Phone:</td>
+                    <td>+34 935 44 23 92</td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td>+34 935 83 11 04</td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>+41 21 601 17 11</td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td>+41 21 601 17 12</td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+        <h2>Contact form</h2>
+
+
+        <p style="display: none;" id="formError">
+            All fields with a red border are mandatory.
+        </p>
+        <form action="/Contact/General" class="contact validate" id="tempId" method="post" novalidate="novalidate">
+            <div>
+                <input name="__RequestVerificationToken" type="hidden" value="-wRnB8KKYPNF65Jrn9EJXM0hBFuYET344MTLAd0UriAW3dgXuaWpnQSQ73kTh8zf7HG7ilZMf46_eCmyxhB2y5qpLOA1">
+                <input type="hidden" name="ValidationToken" id="ValidationToken" value="zIqr6f0+bqKsvo07k6yHPVuXgxQ=" autocomplete="off">
+            </div>
+            <hr />
+            <p>Please enter the required fields (| = required).</p>
+            <br />
+            <fieldset class="row">
+                <div class="col-sm-6">
+                    <div class="formSection">
+                        <label for="Name">Name &nbsp|</label>
+                        <input class="text required" id="Name" name="Name" placeholder="Name" tabindex="1" title="Your name and surname" type="text" value="" aria-required="true">
+
+                    </div>
+                    <br />
+                    <div class="formSection">
+                        <label for="Subject">Subject &nbsp</label>
+                        <input class="text" id="Subject" name="Subject" placeholder="Subject" tabindex="3" title="The subject" type="text" value="">
+
+                    </div>
+                    <br />
+                </div>
+                <br />
+                <div class="col-sm-6">
+                    <div class="formSection">
+                        <label for="Email">Email &nbsp|</label>
+                        <input class="text required email" id="Email" name="Email" placeholder="Email" tabindex="2" title="Your email" type="text" value="" aria-required="true">
+                        
+                        <br />
+                    </div>
+                    <div class="formSection">
+                        <label for="Country">Country &nbsp|</label>
+                        <input class="text required" id="Country" name="Country" placeholder="Country" tabindex="4" title="Your country" type="text" value="" aria-required="true">
+                        
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div class="col-sm-12">
+                    <div class="formSection">
+                        <label for="Message">Message &nbsp|</label>
+                        <textarea class="textarea required growme" cols="20" id="Message" name="Message" placeholder="Message" rows="5" tabindex="5" title="Your message" aria-required="true"></textarea>
+                        
+                        <br />
+                    </div>
+                </div>
+            </fieldset>
+            <br />
+            <fieldset class="row">
+                <div class="col-sm-12">
+                    <div class="formsection">
+                        <input type="submit" value="Send" name="submit" class="btn btn-success">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <script>
+    (function () {
+        var d = function (s) {
+            var e = {}, i, b = 0, c, x, l = 0, a, r = '', w = String.fromCharCode, L = s.length;
+            var A = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+            for (i = 0; i < 64; i++) { e[A.charAt(i)] = i; }
+            for (x = 0; x < L; x++) {
+                c = e[s.charAt(x)]; b = (b << 6) + c; l += 6;
+                while (l >= 8) { ((a = (b >>> (l -= 8)) & 0xff) || (x < (L - 2))) && (r += w(a)); }
+            }
+            return r;
+        }, name = d('VmFsaWRhdGlvblRva2Vu');
+        document.getElementById(name).value = 'zIqr6f0+bqKsvo07k6yHPVuXgxQ=';
+    }())</script>
+
+    </div>
+</div>

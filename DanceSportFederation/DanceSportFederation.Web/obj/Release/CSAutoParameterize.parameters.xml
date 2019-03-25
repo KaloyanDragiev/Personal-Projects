@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DanceSportFederation.Data.DanceSportFederationContext-Web.config Connection String" description="DanceSportFederation.Data.DanceSportFederationContext Connection String used in web.config by the application to access the database." defaultValue="DanceSportFederation.Data.DanceSportFederationContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\Trash\\DanceSportFederation\\DanceSportFederation\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DanceSportFederation.Data.DanceSportFederationContext']/@connectionString" />
+  </parameter>
+</parameters>

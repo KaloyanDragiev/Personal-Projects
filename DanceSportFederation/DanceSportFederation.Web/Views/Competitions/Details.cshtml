@@ -1,0 +1,40 @@
+﻿@model DanceSportFederation.Models.ViewModels.Competitions.DetailsCompetitionVm
+
+@{
+    ViewBag.Title = "DanceSport Federation";
+}
+
+<br />
+<h2>Details for @Html.DisplayFor(vms => Model.Name)</h2>
+<hr />
+<br />
+<table class="table table-striped">
+    <tr>
+        <td><strong> Name of the Competition:&nbsp &nbsp &nbsp</strong>@Html.DisplayFor(vms => Model.Name)</td>
+    </tr>
+    <tr>
+        <td><strong> Organizer:&nbsp &nbsp &nbsp</strong>@Html.DisplayFor(vms => Model.Organizer)</td>
+    </tr>
+    <tr>
+        <td><strong> Description:&nbsp &nbsp &nbsp</strong>@Html.DisplayFor(vms => Model.Description)</td>
+    </tr>
+    <tr>
+        <td><strong> StartDate:&nbsp &nbsp &nbsp</strong>@Html.DisplayFor(vms => Model.StartDate)</td>
+    </tr>
+    <tr>
+        <td><strong> EndDate:&nbsp &nbsp &nbsp</strong>@Html.DisplayFor(vms => Model.EndDate)</td>
+    </tr>
+</table>
+    <br />
+
+    @Html.ActionLink("Back", "Index", "Home", null, new { @class = "btn btn-primary"})
+<br />
+<br />
+@if (User.Identity.IsAuthenticated && Model.StartDate > DateTime.Now)
+{
+    using (Html.BeginForm("Enroll", "Users", FormMethod.Post))
+    {
+        <input type="number" value="@Model.Id" hidden="hidden" name="competitionId"/>
+        <input type="submit" value="Sign In/Out" class="btn btn-success"/>
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model DanceSportFederation.Models.ViewModels.User.ProfileVm
+@{
+    ViewBag.Title = "Profile Page";
+}
+<br />
+    
+<h3>Welcome to your profile page @Html.DisplayFor(vm => vm.Name)!</h3>
+<br />
+@Html.ActionLink("Edit", "Edit", null, new { @class = "btn btn-primary", @style = "float: right" })
+<center><img style="width: 150px" src="https://s-media-cache-ak0.pinimg.com/736x/3c/6a/a5/3c6aa5ba39cbf394c1953cc51a557ec2.jpg" alt="Alternate Text" /></center> 
+
+<h4>Name: &nbsp &nbsp <span style="font-weight:normal"> @Html.DisplayFor(vm => vm.Name)</span></h4>
+<h4>Email:  &nbsp &nbsp<span style="font-weight:normal">@Html.DisplayFor(vm => vm.Email)</span></h4>
+<h4>Couple:  &nbsp &nbsp<span style="font-weight:normal">@Html.DisplayFor(vm => vm.Couple)</span></h4>
+<h4>Club:  &nbsp &nbsp<span style="font-weight:normal">@Html.DisplayFor(vm => vm.Club)</span></h4>
+
+<br />
+<h3>Enrolled Competitions: </h3>
+<br />
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Organizer</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var competition in Model.EnrolledCompetitions)
+    {
+        <tr>
+            <td>@Html.DisplayFor(vm => competition.Name) </td>
+            <td>@Html.DisplayFor(vm => competition.Organizer) </td>
+            <td>@Html.DisplayFor(vm => competition.Description) </td>
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-primary" })
+

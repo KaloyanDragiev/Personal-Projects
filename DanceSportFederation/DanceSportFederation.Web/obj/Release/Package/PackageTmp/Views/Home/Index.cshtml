@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DanceSportFederation.Models.ViewModels.Competitions.CompetitionVm>
+
+@{
+    ViewBag.Title = "DanceSport Federation";
+}
+<br />
+<h2>Welcome to DanceSport Federation</h2>
+<hr />
+<img style="float:right" src="https://cdnm.worlddancesport.org/media/3c921863-8841-4405-a25a-9f16013dab61/800x792/default.jpg" alt="Alternate Text" />
+
+<h4>THE FEDERATION</h4>
+<br />
+<p>The World DanceSport Federation - WDSF is the world governing body for DanceSport. It was founded 1957 under the name International Council of Amateur Dancers in Wiesbaden, Germany, and is now a non-governmental international organisation constituted under Swiss law. It has its Headquarters in Lausanne, Switzerland, and a Branch Office in Sant Cugat, Barcelona, Spain.</p>
+
+<br />
+<p>The mission of WDSF is to regulate, administer and develop DanceSport. For the benefit of millions of athletes at every level and on all continents!</p>
+
+<hr />
+<h2>All Competitions</h2>
+<br />
+<button onclick="visualize()" class="btn btn-success">Visualize</button>
+
+<div id="cont"></div>
+
+<script>
+    function visualize() {
+        $("#cont").load("/home/Visualize");
+    }
+</script>

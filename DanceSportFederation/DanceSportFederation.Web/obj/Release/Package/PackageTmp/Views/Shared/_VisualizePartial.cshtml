@@ -1,0 +1,17 @@
+﻿@model  IEnumerable<DanceSportFederation.Models.ViewModels.Competitions.CompetitionVm>
+<table class="table">
+    <tr>
+        <th>Competition Name</th>
+        <th>Organizer</th>
+        <th>Details</th>
+    </tr>
+        @foreach (var vm in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(vms => vm.Name)</td>
+                <td> @Html.DisplayFor(vms => vm.Organizer)</td>
+                <br/>
+                <td> @Html.ActionLink("Details", "Details", "Competitions", new {id = vm.Id}, new {@class = "btn btn-lg btn-primary"})</td>
+            </tr>
+        }
+</table>
